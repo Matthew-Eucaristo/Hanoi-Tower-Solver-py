@@ -7,7 +7,14 @@ def main():
     answer: tuple = []
 
     # input n of poles and block
-    n: int = int(input('Input number of poles and block: '))
+    input_allowed = False
+    while not input_allowed:
+        try: 
+            n: int = int(input('Input number of poles and block: '))
+            n = max(0, n) # check so that no minus integer allowed
+            input_allowed = True
+        except:
+            print('Please input valid integer!')
 
     # defining all possible alphabets
     max_alphabet_allowed = n
@@ -36,6 +43,10 @@ def main():
 
 def hanoi_algorithm(poles: tuple) -> tuple:
     results = [] # container for the answers
+
+    # raise error if less than 3 poles
+    if len(poles) < 3:
+        raise
 
     # move all blocks in order from biggest (block 1) to smallest (block n)
     for i in reversed(list(poles)):
