@@ -4,18 +4,18 @@ import string
 import itertools
 
 def main():
+    answer: tuple = []
+
+    # input n of poles and block
+    n: int = int(input('Input number of poles and block: '))
+
     # defining all possible alphabets
-    max_alphabet_allowed = 100
+    max_alphabet_allowed = n
     alphabet = []
     for i, s in enumerate(iter_all_strings()):
         alphabet.append(s)
         if i == max_alphabet_allowed:
             break
-
-    answer: tuple = []
-
-    # input n of poles and block
-    n: int = int(input('Input number of poles and block: '))
 
     # get fixed number of poles
     # in this state poles are represented by ABC and blocks are respresented by 123
