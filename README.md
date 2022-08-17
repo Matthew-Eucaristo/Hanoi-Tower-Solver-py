@@ -5,5 +5,5 @@ Notice that this only moves all leftmost blocks to the rightmost pole.
 
 
 # Disclaimer
-I create this solver for fun only, feel free to use it if you need.
+I create this solver for fun only, feel free to use it if you need. <br>
 All credit goes to the rightful owners
